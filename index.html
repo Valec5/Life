@@ -218,21 +218,54 @@ html,body{background:var(--bg);color:var(--t1);font-family:'JetBrains Mono',mono
 .titem.done .tname{color:var(--t3);text-decoration:line-through}
 .thard{font-size:10px;color:var(--amber);flex-shrink:0}
 
+/* GYM DAY SELECTOR */
+.gym-day-selector{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.gds-btn{background:var(--s2);border:1px solid var(--b1);border-radius:10px;padding:10px 6px;text-align:center;cursor:pointer;transition:all .15s;-webkit-appearance:none}
+.gds-btn.active{background:rgba(94,196,176,.15);border-color:var(--teal)}
+.gds-btn.rest{background:rgba(155,142,196,.08);border-color:rgba(155,142,196,.2)}
+.gds-day{font-size:9px;color:var(--t3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px}
+.gds-name{font-size:10px;color:var(--t2);line-height:1.3}
+.gds-btn.active .gds-name{color:var(--teal)}
+
+/* EJ ITEM WITH SET LOGGING */
+.ejitem{display:flex;align-items:flex-start;gap:10px;padding:12px 0;border-bottom:1px solid rgba(42,42,50,.4)}
+.ejitem:last-child{border-bottom:none}
+.ejcb{width:24px;height:24px;border-radius:6px;border:1px solid var(--b2);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:12px;transition:all .2s;margin-top:1px;cursor:pointer;-webkit-appearance:none}
+.ejitem.done .ejcb{background:rgba(94,196,176,.2);border-color:var(--teal);color:var(--teal)}
+.ejinfo{flex:1;min-width:0}
+.ejn{font-size:13px;color:var(--t1);display:flex;align-items:center;justify-content:space-between;gap:6px}
+.ejitem.done .ejn span:first-child{color:var(--t3);text-decoration:line-through}
+.ejd{font-size:11px;color:var(--t3);margin-top:2px}
+.ejp{font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--teal);margin-top:2px}
+.ejnota{font-size:10px;color:var(--amber);margin-top:2px}
+.ej-delete{background:none;border:none;color:var(--t3);font-size:14px;cursor:pointer;padding:0 2px;flex-shrink:0}
+
+/* SET LOG */
+.set-log{margin-top:8px;display:flex;flex-direction:column;gap:4px}
+.set-row{display:flex;align-items:center;gap:6px;background:var(--s2);border-radius:7px;padding:6px 8px}
+.set-num{font-size:10px;color:var(--t3);width:20px;flex-shrink:0}
+.set-input{background:none;border:none;color:var(--teal);font-family:'JetBrains Mono',monospace;font-size:14px;width:52px;text-align:center;outline:none;-webkit-appearance:none;border-bottom:1px solid var(--b2)}
+.set-input:focus{border-color:var(--teal)}
+.set-sep{font-size:11px;color:var(--t3)}
+.set-reps{background:none;border:none;color:var(--amber);font-family:'JetBrains Mono',monospace;font-size:14px;width:40px;text-align:center;outline:none;-webkit-appearance:none;border-bottom:1px solid var(--b2)}
+.set-reps:focus{border-color:var(--amber)}
+.set-lbl{font-size:10px;color:var(--t3)}
+.set-done{width:20px;height:20px;border-radius:4px;border:1px solid var(--b2);background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:10px;flex-shrink:0;-webkit-appearance:none;transition:all .15s;margin-left:auto}
+.set-done.ok{background:rgba(94,196,176,.2);border-color:var(--teal);color:var(--teal)}
+
+/* CARDIO EDIT */
+.cardio-row{display:flex;align-items:center;gap:10px;padding:12px 0;border-top:1px solid rgba(42,42,50,.4);margin-top:4px}
+.cardio-icon{font-size:18px}
+.cardio-info{flex:1}
+.cardio-name{font-size:13px;color:var(--t1)}
+.cardio-nota{font-size:10px;color:var(--amber)}
+.cardio-time-input{background:none;border:none;border-bottom:1px solid var(--b2);color:var(--teal);font-family:'JetBrains Mono',monospace;font-size:18px;width:42px;text-align:center;outline:none;-webkit-appearance:none}
+.cardio-time-input:focus{border-color:var(--teal)}
+
 /* GYM */
 .rstruct{display:flex;align-items:center;gap:6px;margin-bottom:14px;flex-wrap:wrap}
 .rblq{background:var(--s2);border:1px solid var(--b1);border-radius:6px;padding:5px 10px;font-size:10px;color:var(--t2)}
 .rarr{color:var(--t3);font-size:12px}
-.ejitem{display:flex;align-items:flex-start;gap:12px;padding:13px 0;border-bottom:1px solid rgba(42,42,50,.4);cursor:pointer;-webkit-user-select:none}
-.ejitem:last-child{border-bottom:none}
-.ejitem:active{opacity:.7}
-.ejcb{width:24px;height:24px;border-radius:6px;border:1px solid var(--b2);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:12px;transition:all .2s;margin-top:1px}
-.ejitem.done .ejcb{background:rgba(94,196,176,.2);border-color:var(--teal);color:var(--teal)}
-.ejinfo{flex:1}
-.ejn{font-size:13px;color:var(--t1)}
-.ejitem.done .ejn{color:var(--t3);text-decoration:line-through}
-.ejd{font-size:11px;color:var(--t3);margin-top:2px}
-.ejp{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--teal)}
-.ejnota{font-size:10px;color:var(--amber);margin-top:2px}
 
 /* PESOS */
 .plist{display:flex;flex-direction:column;gap:8px}
@@ -499,20 +532,53 @@ html,body{background:var(--bg);color:var(--t1);font-family:'JetBrains Mono',mono
 <section class="sec" id="tab-gym">
   <div class="ph-simple"><div class="pt">Gym</div><div class="ps" id="rutinaTitle">—</div></div>
   <div class="alert-a"><span>⚕</span><span>Hipotiroidismo — si hay fatiga: volumen a la mitad. Nunca al fallo. Solo zona 2 (120-130 ppm).</span></div>
+
+  <!-- SELECTOR DE DÍA -->
   <div class="card">
-    <div class="ct"><div class="cdot" style="background:var(--teal)"></div>Rutina de hoy</div>
+    <div class="ct"><div class="cdot" style="background:var(--teal)"></div>¿Qué día del plan hacés hoy?</div>
+    <div class="gym-day-selector" id="gymDaySelector"></div>
+    <div style="margin-top:10px;font-size:10px;color:var(--t3)">Seleccioná el día del plan aunque no coincida con el día de la semana.</div>
+  </div>
+
+  <!-- RUTINA DEL DÍA SELECCIONADO -->
+  <div class="card" id="gymRutinaCard">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+      <div class="ct" style="margin-bottom:0"><div class="cdot" style="background:var(--teal)"></div><span id="gymRutinaNombre">—</span></div>
+      <button class="btn teal" style="padding:6px 12px;font-size:10px" onclick="openAddEjModal()">+ ejercicio</button>
+    </div>
     <div id="rutinaContainer"></div>
   </div>
+
+  <!-- NOTAS DEL ENTRENO -->
   <div class="card">
-    <div class="ct"><div class="cdot" style="background:var(--teal)"></div>Pesos de referencia</div>
-    <div class="plist" id="pesosList"></div>
-    <div class="re"><button class="btn teal" onclick="savePesos()">guardar pesos</button></div>
+    <div class="ct"><div class="cdot" style="background:var(--teal)"></div>Notas del entreno</div>
+    <textarea class="diary" id="diarioGym" placeholder="Cómo te sentiste, ajustes que hiciste, lo que notaste..." onblur="saveDiario('gym',this.value)"></textarea>
   </div>
+
+  <!-- PESOS DE REFERENCIA -->
   <div class="card">
-    <div class="ct"><div class="cdot" style="background:var(--teal)"></div>Registro de hoy</div>
-    <textarea class="diary" id="diarioGym" placeholder="¿Cómo fue el entreno? Pesos, series, energía..." onblur="saveDiario('gym',this.value)"></textarea>
+    <div class="ct"><div class="cdot" style="background:var(--teal)"></div>Pesos base (referencia)</div>
+    <div class="plist" id="pesosList"></div>
+    <div class="re"><button class="btn teal" onclick="savePesos()">guardar</button></div>
   </div>
 </section>
+
+<!-- MODAL AGREGAR EJERCICIO -->
+<div id="addEjModal" style="display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);padding:20px;display:none;align-items:flex-end">
+  <div style="background:var(--s1);border:1px solid var(--b2);border-radius:18px;padding:20px;width:100%;max-width:480px;margin:0 auto">
+    <div style="font-family:'Cormorant Garamond',serif;font-size:18px;margin-bottom:16px">Agregar ejercicio</div>
+    <input id="newEjNombre" placeholder="Nombre del ejercicio" style="width:100%;background:var(--s2);border:1px solid var(--b1);border-radius:8px;color:var(--t1);font-family:'JetBrains Mono',monospace;font-size:13px;padding:10px 12px;outline:none;margin-bottom:8px">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px">
+      <input id="newEjSeries" placeholder="Series (ej: 3×10)" style="background:var(--s2);border:1px solid var(--b1);border-radius:8px;color:var(--t1);font-family:'JetBrains Mono',monospace;font-size:13px;padding:10px 12px;outline:none">
+      <input id="newEjDescanso" placeholder="Descanso (ej: 90 seg)" style="background:var(--s2);border:1px solid var(--b1);border-radius:8px;color:var(--t1);font-family:'JetBrains Mono',monospace;font-size:13px;padding:10px 12px;outline:none">
+    </div>
+    <input id="newEjNota" placeholder="Nota (opcional)" style="width:100%;background:var(--s2);border:1px solid var(--b1);border-radius:8px;color:var(--t1);font-family:'JetBrains Mono',monospace;font-size:13px;padding:10px 12px;outline:none;margin-bottom:14px">
+    <div style="display:flex;gap:8px">
+      <button class="btn" style="flex:1" onclick="closeAddEjModal()">cancelar</button>
+      <button class="btn teal" style="flex:1" onclick="confirmAddEj()">agregar</button>
+    </div>
+  </div>
+</div>
 
 <!-- DESCANSO -->
 <section class="sec" id="tab-descanso">
@@ -1078,32 +1144,236 @@ function updTemasPct(){
   const pip=document.getElementById('pip');if(pip)pip.textContent=ip+'/10';
 }
 
-// GYM
+// GYM — día seleccionado (independiente del día de la semana)
+function getGymDay(){
+  // Usa el día guardado para hoy, o calcula el siguiente en secuencia
+  const saved = S.get('gym_selected_day_'+TSTR, null);
+  if(saved !== null) return saved;
+  // Default: día de la semana actual (0-4 para lun-vie, resto = descanso)
+  return TDX <= 4 ? TDX : 0;
+}
+
+function buildGymDaySelector(){
+  const sel = document.getElementById('gymDaySelector');
+  if(!sel) return;
+  const current = getGymDay();
+  const labels = [
+    {d:'Día 1', n:'Sup\nEmpuje+Tirón'},
+    {d:'Día 2', n:'Inf\nCuád+Glúteos'},
+    {d:'Día 3', n:'Empuje\n+Core'},
+    {d:'Día 4', n:'Inf\nIsquios+Glút'},
+    {d:'Día 5', n:'Sup\nTirón+Bíceps'},
+    {d:'Sáb', n:'Descanso\nactivo'},
+    {d:'Dom', n:'Descanso\nactivo'},
+  ];
+  sel.innerHTML = '';
+  labels.forEach((l, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'gds-btn' + (i === current ? ' active' : '') + (i >= 5 ? ' rest' : '');
+    btn.innerHTML = `<div class="gds-day">${l.d}</div><div class="gds-name">${l.n.replace('\n','<br>')}</div>`;
+    btn.onclick = () => {
+      S.set('gym_selected_day_'+TSTR, i);
+      haptic('light');
+      buildGymDaySelector();
+      buildGym();
+    };
+    sel.appendChild(btn);
+  });
+}
+
 function buildGym(){
-  const r=RUTINAS[TDX];
-  document.getElementById('rutinaTitle').textContent=r.n;
-  const con=document.getElementById('rutinaContainer');
-  if(!r.e.length){con.innerHTML=`<div style="font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;color:var(--t3);padding:8px 0">Hoy es descanso activo — caminá, estirá, recuperate.</div>`;return}
-  const pesos=S.get('pesos',PESOS_BASE.map(p=>p.kg))||PESOS_BASE.map(p=>p.kg);
-  const done=S.get('rd_'+TSTR,{})||{};
-  con.innerHTML=`<div class="rstruct"><div class="rblq">🔥 10 min cardio</div><div class="rarr">→</div><div class="rblq">💪 Fuerza</div><div class="rarr">→</div><div class="rblq">🚴 20 min zona 2</div></div>`
-    +r.e.map((ej,i)=>{
-      const pw=ej.pk!==null?(pesos[ej.pk]||'—'):null;const h=done[i]||false;
-      return `<div class="ejitem${h?' done':''}" onclick="togEj(${i},this)">
-        <div class="ejcb">${h?'✓':''}</div>
-        <div class="ejinfo">
-          <div class="ejn">${ej.n}</div>
-          <div class="ejd">${ej.s}${ej.r!=='—'?' · '+ej.r:''}</div>
-          ${pw!==null?`<div class="ejp">${pw} kg</div>`:''}
-          ${ej.nota?`<div class="ejnota">${ej.nota}</div>`:''}
-        </div>
+  const dayIdx = getGymDay();
+  const r = RUTINAS[dayIdx];
+  const titleEl = document.getElementById('rutinaTitle');
+  const nombreEl = document.getElementById('gymRutinaNombre');
+  if(titleEl) titleEl.textContent = r.n;
+  if(nombreEl) nombreEl.textContent = r.n;
+
+  const con = document.getElementById('rutinaContainer');
+  if(!r.e.length){
+    con.innerHTML = `<div style="font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;color:var(--t3);padding:8px 0">Hoy es descanso activo — caminá, estirá, recuperate. 🌿</div>`;
+    return;
+  }
+
+  const pesos = S.get('pesos', PESOS_BASE.map(p=>p.kg)) || PESOS_BASE.map(p=>p.kg);
+  const done = S.get('rd_'+TSTR, {}) || {};
+  const setLogs = S.get('setlogs_'+TSTR, {}) || {};
+  // Ejercicios custom del día
+  const customEjs = S.get('custom_ejs_'+TSTR+'_'+dayIdx, []) || [];
+  // Tiempo cardio modificado
+  const cardioTime = S.get('cardio_time_'+TSTR, 20);
+
+  con.innerHTML = `<div class="rstruct"><div class="rblq">🔥 10 min cardio suave</div><div class="rarr">→</div><div class="rblq">💪 Fuerza</div><div class="rarr">→</div><div class="rblq">🚴 zona 2</div></div>`;
+
+  // Ejercicios de fuerza (todo menos cardio)
+  const fuerzaEjs = r.e.filter(ej => ej.r !== '—');
+  fuerzaEjs.forEach((ej, i) => {
+    const pw = ej.pk !== null ? (pesos[ej.pk] || '—') : null;
+    const h = done['f'+i] || false;
+    const log = setLogs['f'+i] || {};
+    // Parsear número de series
+    const seriesMatch = ej.s.match(/(\d+)×/);
+    const numSeries = seriesMatch ? parseInt(seriesMatch[1]) : 3;
+
+    const setsHtml = Array.from({length: numSeries}, (_, si) => {
+      const sl = log[si] || {};
+      return `<div class="set-row">
+        <div class="set-num">S${si+1}</div>
+        <input class="set-input" type="number" inputmode="decimal" step="0.5" placeholder="${pw||'kg'}"
+          value="${sl.kg||''}" onchange="saveSetLog('f${i}',${si},'kg',this.value)" title="kg">
+        <div class="set-sep">kg ×</div>
+        <input class="set-reps" type="number" inputmode="numeric" placeholder="reps"
+          value="${sl.reps||''}" onchange="saveSetLog('f${i}',${si},'reps',this.value)">
+        <div class="set-lbl">reps</div>
+        <button class="set-done${sl.done?' ok':''}" onclick="toggleSetDone('f${i}',${si},this)">${sl.done?'✓':''}</button>
       </div>`;
     }).join('');
+
+    const div = document.createElement('div');
+    div.className = 'ejitem' + (h ? ' done' : '');
+    div.id = 'ej_f'+i;
+    div.innerHTML = `
+      <button class="ejcb" onclick="togEj('f${i}',this)">${h?'✓':''}</button>
+      <div class="ejinfo">
+        <div class="ejn"><span>${ej.n}</span><span style="font-size:10px;color:var(--t3)">${ej.s}${ej.r!=='—'?' · '+ej.r:''}</span></div>
+        ${pw !== null ? `<div class="ejp">${pw} kg base</div>` : ''}
+        ${ej.nota ? `<div class="ejnota">${ej.nota}</div>` : ''}
+        <div class="set-log">${setsHtml}</div>
+      </div>`;
+    con.appendChild(div);
+  });
+
+  // Ejercicios custom
+  customEjs.forEach((ej, ci) => {
+    const h = done['c'+ci] || false;
+    const log = setLogs['c'+ci] || {};
+    const seriesMatch = (ej.s||'').match(/(\d+)×/);
+    const numSeries = seriesMatch ? parseInt(seriesMatch[1]) : 3;
+    const setsHtml = Array.from({length: numSeries}, (_, si) => {
+      const sl = log[si] || {};
+      return `<div class="set-row">
+        <div class="set-num">S${si+1}</div>
+        <input class="set-input" type="number" inputmode="decimal" step="0.5" placeholder="kg"
+          value="${sl.kg||''}" onchange="saveSetLog('c${ci}',${si},'kg',this.value)">
+        <div class="set-sep">kg ×</div>
+        <input class="set-reps" type="number" inputmode="numeric" placeholder="reps"
+          value="${sl.reps||''}" onchange="saveSetLog('c${ci}',${si},'reps',this.value)">
+        <div class="set-lbl">reps</div>
+        <button class="set-done${sl.done?' ok':''}" onclick="toggleSetDone('c${ci}',${si},this)">${sl.done?'✓':''}</button>
+      </div>`;
+    }).join('');
+    const div = document.createElement('div');
+    div.className = 'ejitem' + (h ? ' done' : '');
+    div.innerHTML = `
+      <button class="ejcb" onclick="togEj('c${ci}',this)">${h?'✓':''}</button>
+      <div class="ejinfo">
+        <div class="ejn">
+          <span>${ej.n}</span>
+          <button class="ej-delete" onclick="deleteCustomEj(${ci})" title="eliminar">✕</button>
+        </div>
+        ${ej.s ? `<div class="ejd">${ej.s}${ej.r?' · '+ej.r:''}</div>` : ''}
+        ${ej.nota ? `<div class="ejnota">${ej.nota}</div>` : ''}
+        <div class="set-log">${setsHtml}</div>
+      </div>`;
+    con.appendChild(div);
+  });
+
+  // Cardio zona 2 editable
+  const cardioDiv = document.createElement('div');
+  cardioDiv.className = 'cardio-row';
+  cardioDiv.innerHTML = `
+    <div class="cardio-icon">🚴</div>
+    <div class="cardio-info">
+      <div class="cardio-name">Cardio zona 2</div>
+      <div class="cardio-nota">120-130 ppm · conversacional</div>
+    </div>
+    <input class="cardio-time-input" type="number" inputmode="numeric" min="5" max="60"
+      value="${cardioTime}" onchange="saveCardioTime(this.value)">
+    <span style="font-size:11px;color:var(--t3)">min</span>
+    <button class="ejcb${done['cardio']?' done':''}" style="margin-left:8px" onclick="togEj('cardio',this)">${done['cardio']?'✓':''}</button>
+  `;
+  con.appendChild(cardioDiv);
 }
-function togEj(idx,el){
-  const k='rd_'+TSTR;const done=S.get(k,{})||{};done[idx]=!done[idx];S.set(k,done);
-  el.classList.toggle('done',done[idx]);el.querySelector('.ejcb').textContent=done[idx]?'✓':'';
-  if(done[idx]){confetti(el);haptic('success')}else haptic('light');
+
+function togEj(key, el){
+  const k = 'rd_'+TSTR;
+  const done = S.get(k, {}) || {};
+  done[key] = !done[key];
+  S.set(k, done);
+  // actualizar solo el botón tocado
+  el.classList.toggle('done', done[key]);
+  el.textContent = done[key] ? '✓' : '';
+  // actualizar item padre si existe
+  const item = document.getElementById('ej_'+key);
+  if(item) item.classList.toggle('done', done[key]);
+  if(done[key]){ confetti(el); haptic('success'); }
+  else haptic('light');
+}
+
+function saveSetLog(ejKey, setIdx, field, val){
+  const k = 'setlogs_'+TSTR;
+  const logs = S.get(k, {}) || {};
+  if(!logs[ejKey]) logs[ejKey] = {};
+  if(!logs[ejKey][setIdx]) logs[ejKey][setIdx] = {};
+  logs[ejKey][setIdx][field] = val;
+  S.set(k, logs);
+}
+
+function toggleSetDone(ejKey, setIdx, btn){
+  const k = 'setlogs_'+TSTR;
+  const logs = S.get(k, {}) || {};
+  if(!logs[ejKey]) logs[ejKey] = {};
+  if(!logs[ejKey][setIdx]) logs[ejKey][setIdx] = {};
+  logs[ejKey][setIdx].done = !logs[ejKey][setIdx].done;
+  S.set(k, logs);
+  btn.classList.toggle('ok', logs[ejKey][setIdx].done);
+  btn.textContent = logs[ejKey][setIdx].done ? '✓' : '';
+  haptic('light');
+}
+
+function saveCardioTime(val){
+  S.set('cardio_time_'+TSTR, parseInt(val) || 20);
+}
+
+// CUSTOM EXERCISES
+function openAddEjModal(){
+  const m = document.getElementById('addEjModal');
+  m.style.display = 'flex';
+  document.getElementById('newEjNombre').value = '';
+  document.getElementById('newEjSeries').value = '';
+  document.getElementById('newEjDescanso').value = '';
+  document.getElementById('newEjNota').value = '';
+  setTimeout(()=>document.getElementById('newEjNombre').focus(), 100);
+}
+function closeAddEjModal(){
+  document.getElementById('addEjModal').style.display = 'none';
+}
+function confirmAddEj(){
+  const n = document.getElementById('newEjNombre').value.trim();
+  if(!n){ haptic(); return; }
+  const dayIdx = getGymDay();
+  const k = 'custom_ejs_'+TSTR+'_'+dayIdx;
+  const ejs = S.get(k, []) || [];
+  ejs.push({
+    n,
+    s: document.getElementById('newEjSeries').value.trim() || '3×10',
+    r: document.getElementById('newEjDescanso').value.trim() || '',
+    nota: document.getElementById('newEjNota').value.trim(),
+  });
+  S.set(k, ejs);
+  closeAddEjModal();
+  buildGym();
+  haptic('success');
+  flash(n + ' agregado ✓');
+}
+function deleteCustomEj(ci){
+  const dayIdx = getGymDay();
+  const k = 'custom_ejs_'+TSTR+'_'+dayIdx;
+  const ejs = S.get(k, []) || [];
+  ejs.splice(ci, 1);
+  S.set(k, ejs);
+  buildGym();
+  haptic('light');
 }
 function buildPesosList(){
   const saved=S.get('pesos',PESOS_BASE.map(p=>p.kg))||PESOS_BASE.map(p=>p.kg);
@@ -1244,14 +1514,17 @@ async function init(){
     'temas_fc','temas_ip','pesos','racha_record',
     'blq_m_'+TSTR,'blq_t_'+TSTR,'blq_n_'+TSTR,
     'd_estudio_'+TSTR,'d_gym_'+TSTR,
-    'rd_'+TSTR,'pom_'+TSTR,'desc_'+TSTR,
+    'rd_'+TSTR,'setlogs_'+TSTR,'pom_'+TSTR,'desc_'+TSTR,
+    'gym_selected_day_'+TSTR,'cardio_time_'+TSTR,
+    'custom_ejs_'+TSTR+'_0','custom_ejs_'+TSTR+'_1','custom_ejs_'+TSTR+'_2',
+    'custom_ejs_'+TSTR+'_3','custom_ejs_'+TSTR+'_4',
   ]);
 
   const dot=document.getElementById('syncDot');const lbl=document.getElementById('syncLbl');
   if(window.storage){dot.style.background='var(--teal)';lbl.textContent='sync ☁';lbl.style.color='var(--teal)'}
   else{dot.style.background='var(--amber)';lbl.textContent='local';lbl.style.color='var(--amber)'}
 
-  buildHoy();buildSemana();buildTemas();buildGym();buildPesosList();loadDiarios();buildDescanso();buildSleepSemana();buildRacha();
+  buildHoy();buildSemana();buildTemas();buildGymDaySelector();buildGym();buildPesosList();loadDiarios();buildDescanso();buildSleepSemana();buildRacha();
   renderPom();document.getElementById('pomCount').textContent=S.get('pom_'+TSTR,0)||0;
 
   // Ocultar splash
